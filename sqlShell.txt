@@ -1,0 +1,6 @@
+pid=$( ps -ef | grep 'sql' | awk '{print $2}')
+
+if [ -z "$pid" ]
+then
+ node /nodeServer/sql.js
+fi
